@@ -115,7 +115,14 @@ button:hover {
     position: relative;
     display: block;
     width: 100%;
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
     overflow: hidden;
+}
+
+/* Espaço entre o navbar/topo e o container do jogo (evita o iframe colado no menu) */
+.detail-container .container-fluid {
+    margin-top: 20px;
 }
 
 .embed-responsive::before {
