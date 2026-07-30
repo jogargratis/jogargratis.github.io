@@ -1,0 +1,177 @@
+/* Variáveis de Cores */
+:root {
+    /* Paleta de Cores */
+    --primary-color: #00203d;
+    --secondary-color: #a8dadc;
+    --analogous-light: #004080;
+    --analogous-dark: #001a2e;
+    --triadic-warm: #ff6f61;
+    --triadic-bright: #ffe156;
+
+    /* Tipografia */
+    --text-color: #ffffff;
+    --title-color: #338dc3;
+    --text-muted: #338dc3;
+    --text-highlight: #a8dadc;
+
+    /* Outros */
+    --button-bg: var(--triadic-warm);
+    --button-hover: #ff4c3a;
+    --link-color: var(--title-color);
+    --link-hover: #82c0c4;
+}
+
+/* Estilo Geral */
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Botões */
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Cartões */
+.card {
+    background-color: var(--analogous-light);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--title-color);
+    margin-top: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Efeito Zoom em Imagens */
+.image-container {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px; /* Mantém consistência visual */
+}
+
+.image-container img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1);
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Destaca levemente a imagem */
+}
+
+/* Responsividade de Vídeos */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.embed-responsive .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Destaques */
+.highlight {
+    background-color: var(--triadic-bright);
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Menu de Categorias abre ao passar o mouse (hover), não só ao clicar */
+.navbar .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--analogous-dark);
+    padding: 15px;
+}
+
+header h1 {
+    color: var(--title-color);
+    margin: 0;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--analogous-dark);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
